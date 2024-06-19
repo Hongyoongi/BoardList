@@ -1,0 +1,94 @@
+@font-face {
+	font-family:singleDayFont;
+	src: url(./../font/SingleDay-Regular.ttf);
+ }
+#wrapper{
+	margin:0 auto;
+	text-align : center;
+}
+.first{
+	margin: auto;
+	text-align : center;
+	font-size:35px;
+	font-weight:bold;
+}
+table{
+	font-family:singleDayFont;
+	width:700px;
+	margin:auto;
+	border: 0px solid black;
+	text-align : center;
+	padding:0;
+	border-spacing:2px; 
+}
+thead{
+	text-align : right;
+	font-size : 16px;
+}
+thead td a{
+	padding:5px ;
+	color: black;
+	text-decoration: none;
+	font-size : 18px;
+}
+.upd{
+	font-family:singleDayFont;
+	text-decoration-line: none;  
+	background-color: white;
+	border:none;
+	cursor: pointer;
+	font-size : 18px;
+}
+tbody{
+	font-size : 25px;
+}
+.textfiled{
+	width:240px;
+	height:32px;
+	border-radius:5px;
+}
+.tilte{
+	width:580px;
+	height:32px;
+	border-radius:5px;
+}
+.blac{
+	color:white;
+	background-color:black;
+	border-radius:5px;
+}
+
+tbody tr td textarea{
+	width:580px;
+	border-radius:5px;
+}
+
+.avator{
+	width:800px;
+	margin: auto;
+	text-align : center;
+}
+.avator p{
+	float:left;
+}
+input.button{
+	  width : 200px;
+	  color : white;
+	  border : 3px solid black;
+	  border-radius : 5px;
+	  font-size : 25px;
+	  font-family : "comic sans ms";
+	  background-color : #000000;
+	  padding : 10px;
+	  font-family:singleDayFont;
+	}
+
+img{
+	 width : 160px;
+	 height:160px;
+}
+.txtarea{
+	text-align:top;
+	width:580px;
+	height:300px;
+}

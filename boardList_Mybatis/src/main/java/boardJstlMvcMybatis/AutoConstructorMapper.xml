@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+       Copyright 2009-2022 the original author or authors.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+          https://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.apache.ibatis.autoconstructor.AutoConstructorMapper">
+	<select id="boardSelAll" resultType="boardV01.BoardV01DTO">
+		select * from boardV01
+	</select>
+	
+	<select id="boardContentAll" resultType="boardV01.BoardV01DTO">
+		select * from boardV01 where bod_no=#{bod_no}
+	</select>
+	
+	<insert id="boardInsAll" parameterType="boardV01.BoardV01DTO">
+		insert into boardV01(bod_no, bod_writer, bod_email, bod_subject, bod_pwd, bod_logtime, bod_content, bod_readCnt, bod_connIp)
+		values((select max(bod_no)+1 from boardV01), #{bod_writer}, #{bod_email}, #{bod_subject}, #{bod_pwd}, sysdate, #{bod_content}, 0, #{bod_connIp})
+	</insert>
+	
+	<update id="boardUpdAll" parameterType="boardV01.BoardV01DTO">
+		update boardV01 set bod_pwd=#{bod_pwd}, bod_subject=#{bod_subject},bod_email=#{bod_email}, bod_content=#{bod_content} where bod_no=#{bod_no}
+	</update>
+	
+	<delete id="boardDelAll" parameterType="boardV01.BoardV01DTO">
+		delete from boardV01 where bod_no=#{bod_no} and bod_pwd=#{bod_pwd}
+	</delete>
+</mapper>
+
+

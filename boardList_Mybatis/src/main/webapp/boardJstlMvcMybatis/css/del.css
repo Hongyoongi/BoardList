@@ -1,0 +1,48 @@
+@font-face {
+	font-family:singleDayFont;
+	src: url(./../font/SingleDay-Regular.ttf);
+ }
+#wrapper{
+    font-family:singleDayFont;
+	margin:0 auto;
+	text-align : center;
+    font-weight: 800;
+}
+#delForm{
+    margin:0 auto;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 500px;
+    height: 60px;
+    background-color: black;
+    display: inline-block;
+    color: white;
+}
+#delForm p{
+    margin:15px auto;
+    font-size: 20px;
+}
+#delTxt{
+    margin:0 auto;
+    width: 494px;
+    height: 60px;
+}
+#delBtn{
+    margin:0 auto;
+    margin-top: 5px;
+    width: 500px;
+    height: 80px;
+    background-color: black;
+    color: white;
+    display: inline-block;
+}
+#delBtn input{
+    font-family:singleDayFont;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    font-size: 20px;
+    font-weight: 800;
+}
